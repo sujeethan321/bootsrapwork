@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <style>
+      /* Card Flip Core Logic Setup */
+.flip-card {
+  background-color: transparent;
+  height: 320px; /* Uniform height given to the structure */
+  perspective: 1000px; 
+}
+
+.flip-card-inner {
+  position: relative;       
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+/* Hover rotation behavior */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Rigid sizing alignment rules for absolute front/back containers */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+}
+
+/* Start orientation adjustment for the hidden face */
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Styling for filtering transitions */
+.product-item {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Custom utility class to safely hide filtered elements */
+.product-item.is-hidden {
+  display: none !important;
+}
+    </style>
+</head>
+<body>
+    
+
+
+<div class="container py-5">
+  <div class="row g-4">
+    
+    <!-- 1. EARPHONE CARD -->
+    <div class="col-md-4">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- Front -->
+          <div class="card flip-card-front bg-dark text-white shadow">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <div class="display-4 mb-3">🎧</div>
+              <h4 class="card-title text-uppercase tracking-wider">Earphones</h4>
+              <p class="text-muted small">Premium Sound Experience</p>
+            </div>
+          </div>
+          <!-- Back -->
+          <div class="card flip-card-back bg-secondary text-white shadow">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <h5>Sonus Flow</h5>
+              <p class="small text-center px-2">Active Noise Cancellation & 40h Battery life.</p>
+              <h4 class="text-warning mb-3">$149</h4>
+              <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#earphoneModal">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. MOBILE CARD -->
+    <div class="col-md-4">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- Front -->
+          <div class="card flip-card-front bg-dark text-white shadow">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <div class="display-4 mb-3">📱</div>
+              <h4 class="card-title text-uppercase tracking-wider">Mobile</h4>
+              <p class="text-muted small">Next-Gen Connectivity</p>
+            </div>
+          </div>
+          <!-- Back -->
+          <div class="card flip-card-back bg-secondary text-white shadow">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <h5>Apex Phone Pro</h5>
+              <p class="small text-center px-2">OLED Display, Snapdragon 8 Gen 4, 256GB.</p>
+              <h4 class="text-warning mb-3">$899</h4>
+              <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#mobileModal">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. TV CARD -->
+    <div class="col-md-4">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- Front -->
+          <div class="card flip-card-front bg-dark text-white shadow">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <div class="display-4 mb-3">📺</div>
+              <h4 class="card-title text-uppercase tracking-wider">Smart TV</h4>
+              <p class="text-muted small">Cinema At Home</p>
+            </div>
+          </div>
+          <!-- Back -->
+          <div class="card flip-card-back bg-secondary text-white shadow">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <h5>Quantum Oled 65"</h5>
+              <p class="small text-center px-2">4K Ultra HD, Dolby Vision, Smart OS.</p>
+              <h4 class="text-warning mb-3">$1,299</h4>
+              <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#tvModal">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= MODALS SECTION ================= -->
+
+<!-- Earphone Modal -->
+<div class="modal fade" id="earphoneModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-close="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="row align-items-center">
+          <div class="col-12 text-center mb-3">
+            <span class="display-1">🎧</span>
+          </div>
+          <div class="col-12">
+            <h3>Sonus Flow Earphones</h3>
+            <p class="text-muted">Immersive sound, dynamic drivers to resolve brand noise. Premium active noise cancellation offers a supple audio experience.</p>
+            <ul class="text-start mb-4">
+              <li>Advanced 40mm drivers</li>
+              <li>40 hours playtime</li>
+              <li>Multi-point connection</li>
+              <li>Ergonomic design</li>
+            </ul>
+            <button type="button" class="btn btn-success w-100 py-2">ADD TO CART ($149)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Modal -->
+<div class="modal fade" id="mobileModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-close="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="row align-items-center">
+          <div class="col-12 text-center mb-3">
+            <span class="display-1">📱</span>
+          </div>
+          <div class="col-12">
+            <h3>Apex Phone Pro</h3>
+            <p class="text-muted">Blazing fast performance meets clean UI. Equipped with advanced cameras to capture stunning depth and clarity in any light constraint.</p>
+            <ul class="text-start mb-4">
+              <li>6.7" LTPO AMOLED Screen</li>
+              <li>Triple lens setup (50MP Main)</li>
+              <li>5000 mAh battery + 80W Quick-Charge</li>
+              <li>IP68 Water/Dust resistant</li>
+            </ul>
+            <button type="button" class="btn btn-success w-100 py-2">ADD TO CART ($899)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TV Modal -->
+<div class="modal fade" id="tvModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close" data-bs-close="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="row align-items-center">
+          <div class="col-12 text-center mb-3">
+            <span class="display-1">📺</span>
+          </div>
+          <div class="col-12">
+            <h3>Quantum OLED 65"</h3>
+            <p class="text-muted">Transform your living room into a cinematic haven. Experience perfect blacks and an infinite palette of colors engineered by Quantum dot layers.</p>
+            <ul class="text-start mb-4">
+              <li>Real 4K Resolution up to 120Hz</li>
+              <li>Dolby Atmos Spatial Audio built-in</li>
+              <li>4x HDMI 2.1 Ports for elite gaming</li>
+              <li>Voice-controlled smart hub dashboard</li>
+            </ul>
+            <button type="button" class="btn btn-success w-100 py-2">ADD TO CART ($1,299)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- grid - responsive card with filters -->
+<div class="container py-5">
+  
+  <div class="row mb-5">
+    <div class="col-12 text-center">
+      <button class="btn btn-primary filter-btn active me-2" data-filter="all">All Products</button>
+      <button class="btn btn-outline-primary filter-btn me-2" data-filter="audio">Earphones</button>
+      <button class="btn btn-outline-primary filter-btn me-2" data-filter="mobile">Mobiles</button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="tv">TVs</button>
+    </div>
+  </div>
+
+  <div class="row g-4" id="product-grid">
+    
+    <div class="col-12 col-sm-6 col-md-4 product-item" data-category="audio">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center py-4">
+          <div class="display-5 mb-3">🎧</div>
+          <h5 class="card-title">Sonus Flow</h5>
+          <p class="card-text text-muted">Premium Active Noise Cancelling</p>
+          <span class="badge bg-success">$149</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 product-item" data-category="mobile">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center py-4">
+          <div class="display-5 mb-3">📱</div>
+          <h5 class="card-title">Apex Phone Pro</h5>
+          <p class="card-text text-muted">6.7" OLED Screen, 256GB</p>
+          <span class="badge bg-success">$899</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 product-item" data-category="tv">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center py-4">
+          <div class="display-5 mb-3">📺</div>
+          <h5 class="card-title">Quantum OLED 65"</h5>
+          <p class="card-text text-muted">4K Ultra HD Cinema Display</p>
+          <span class="badge bg-success">$1,299</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 product-item" data-category="audio">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center py-4">
+          <div class="display-5 mb-3">🎙️</div>
+          <h5 class="card-title">Studio Mic Wireless</h5>
+          <p class="card-text text-muted">Ultra-low latency audio</p>
+          <span class="badge bg-success">$89</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<!-- REF-03 -->
+<div class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 11">
+    <div class="toast show align-items-center text-dark bg-danger border-0 shadow rounded" style="min-width:250px;" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <!-- 2. Toast ulla irukra content text -->
+            <div class="toast-body medium">
+                This is an danger toast!
+            </div>
+            <!-- 3. Close button (Toast style ku yetra madhiri) -->
+            <button type="button" class="btn-close btn-close-dark me-2     m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            
+        </div>
+    </div>
+</div>
+<div class="position-fixed bottom-0 start-0 p-4" style="z-index: 11">
+    <div class="toast show align-items-center text-dark bg-warning border-0 shadow rounded"  style="min-width:250px;"  role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body medium ">
+                This is a warning toast!
+            </div>
+            <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+<div class="position-fixed bottom-0 end-0 p-4" style="z-index: 11">
+    <div class="toast show align-items-center text-dark bg-success border-0 shadow rounded"  style="min-width:250px;" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body medium">
+                This is a success toast!
+            </div>
+            <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- REF-04 -->
+<div class="row justify-content-center mt-4">
+  <div class="col-sm-6 ">
+    <div class="card w-100">
+      <div class="card-body">
+        <h5 class="card-title">Special title</h5>
+        <p class="card-text">Main model that opens a confirmation model</p>
+        
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+           <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+               <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               <p class="model-text">Perform an action that needs confirmation</p>
+               <button class="btn btn-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Delete item</button>
+              </div>
+              <div class="modal-footer">
+               <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Close</button>
+              </div>
+            </div>
+           </div>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REF-05 -->
+<div class="container mt-5 mb-5">
+<div class="accordion w-100 mx-auto" id="accordionBasic" >
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Item-1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBasic">
+      <div class="accordion-body">
+        <strong><b>WATCH</b></strong> Watch is a useful device that helps us know the time. It is worn on the wrist and is available in many styles and designs. Modern watches can also show the date, track fitness activities, and connect to smartphones ⌚.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Item-2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionBasic">
+      <div class="accordion-body">
+        <strong><b>PHONE</b></strong>A phone is an important device used for communication. It allows people to make calls, send messages, and access the internet. Modern smartphones can also be used for taking photos, studying, and entertainment 📱.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Item-3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionBasic">
+      <div class="accordion-body">
+        <strong><b>LAPTOP</b></strong>A laptop is a portable computer that can be used anywhere. It helps people study, work, browse the internet, and create documents. Laptops are powerful, convenient, and widely used in daily life 💻.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+    <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const productItems = document.querySelectorAll(".product-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      // 1. Manage Active Button Styling Class
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("btn-primary", "active");
+        btn.classList.add("btn-outline-primary");
+      });
+      button.classList.add("btn-primary", "active");
+      button.classList.remove("btn-outline-primary");
+
+      // 2. Filter Action Strategy
+      const targetFilter = button.getAttribute("data-filter");
+
+      productItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category");
+
+        if (targetFilter === "all" || itemCategory === targetFilter) {
+          item.classList.remove("is-hidden");
+        } else {
+          item.classList.add("is-hidden");
+        }
+      });
+    });
+  });
+});
+    </script>
+</body>
+</html>

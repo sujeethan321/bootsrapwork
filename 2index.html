@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swing Image Card</title>
+    <link rel="stylesheet" href="./bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+ <div class="row g-3">
+    <!--card-1-->
+     <div class="col-md-4">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+          class="card-img-top object-fit-cover flip-img" style="height: 350px;">
+          <div class="card-body">
+            <h5 class="card-title">Royal Classic Watch</h5>
+            <p class="card-text text-muted">Luxury look for everyday style,Perfect blend of style and class</p>
+             <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="fw-bold text-success">₹7,999</span>
+                <div class="d-flex gap-2">
+                 <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"data-bs-target="#product1">Quick View</button>
+                 <button type="button" class="btn btn-primary">Buy</button>
+                </div>
+             </div>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary">Updated 10 mins ago</small>
+          </div>
+    <!-- QUICK VIEW POPUP -->
+          <div class="modal fade" id="product1">
+           <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+             <div class="modal-header">
+              <h5>Product Details</h5>
+              <button class="btn-close" data-bs-dismiss="modal"></button>
+             </div>
+             <div class="modal-body">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" class="w-100 mb-3">
+                <div class="model-bodypart">
+                 <h5 class="title">Royal Classic Watch</h5>
+                 <p class="model-text text-muted">Luxury look for everyday style,Perfect blend of style and class</p>
+                </div>
+                 <div class="container mt-5 bg-white p-4 rounded shadow-sm" style="max-width: 600px;">
+                  <table class="table table-borderless align-middle m-0">
+                    <tbody>
+                     <tr class="border-bottom">
+                      <td class="text-muted py-3" style="width: 30%;">Specifications</td>
+                      <td class="py-3 fw-normal text-dark">Brand, Dial Size, Watch's Water Resistance</td>
+                     </tr>
+                      <tr class="border-bottom">
+                       <td class="text-muted py-3">Installment</td>
+                       <td class="py-1 text-dark">
+                        <ul>
+                         <li>Month 1 → ₹2,000 </li>
+                         <li>Month 2 → ₹2,000 </li>
+                         <li>Month 3 → ₹2,000 </li>
+                         <li>Month 4 → ₹1,999</li>
+                        </ul>
+                       </td>
+                      </tr>
+                      <tr class="border-bottom">
+                       <td class="text-muted py-3" style="vertical-align: top;">Delivery</td>
+                       <td class="py-3">
+                         <div class="text-danger">Sri Lanka</div>
+                         <div class="text-muted small mt-1">Standard</div>
+                         <div class="fw-bold mt-1">Rs. 255</div>
+                       </td>
+                      </tr>
+                      <tr>
+                       <td class="text-muted py-3" style="vertical-align: top;">Service</td>
+                       <td class="py-3">
+                        <ul class="list-unstyled m-0">
+                         <li class="text-dark">▪ 14 days easy return</li>
+                         <li class="text-muted small">Change of mind is not applicable</li>
+                         <li class="text-dark mt-1">▪ 6 Months Seller Warranty</li>
+                        </ul>
+                       </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                 </div>
+             </div>
+            </div>
+           </div>
+          </div>
+        </div>
+      </div>
+     </div>
+    <!--card-2-->
+     <div class="col-md-4">
+      <div class="card">
+       <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"class="card-img-top object-fit-cover flip-img" style="height: 350px;">
+        <div class="card-body">
+         <h5 class="card-title">Smartphone</h5>
+         <p class="card-text text-muted">Perfect for calls, apps and social media,Stylish design with modernlook</p>
+         <div class="d-flex justify-content-between align-items-center mt-3">
+          <span class="fw-bold text-success">₹19,999</span>
+           <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"data-bs-target="#product2">Quick View</button>
+            <button type="button" class="btn btn-primary">Buy</button>
+           </div>
+          </div>
+         </div>
+         <div class="card-footer">
+          <small class="text-body-secondary">Updated 3 mins ago</small>
+         </div>    
+    <!-- QUICK VIEW POPUP -->
+         <div class="modal fade" id="product2">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+           <div class="modal-content">
+            <div class="modal-header">
+             <h5>Product Details</h5>
+             <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+             <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9 "class="card-img-top" style="height:550px; width:100%; object-fit:cover;">
+              <div class="model-bodypart">
+               <h5 class="title">Smartphone</h5>
+               <p class="model-text text-muted">Perfect for calls, apps and social media,Stylish design with modernlook</p>
+              </div>
+              <div class="container mt-5 bg-white p-4 rounded shadow-sm"style="max-width: 600px;">
+               <table class="table table-borderless align-middle m-0">
+                <tbody>
+                 <tr class="border-bottom">
+                  <td class="text-muted py-3" style="width: 30%;">Specifications</td>
+                  <td class="py-3 fw-normal text-dark">Brand,Display Size, RAM, Storage,Processor</td>
+                 </tr>
+                 <tr class="border-bottom">
+                  <td class="text-muted py-3">Installment</td>
+                  <td class="py-1 text-dark">
+                   <ul>
+                    <li>Month 1 → ₹5,000 </li>
+                    <li>Month 2 → ₹5,000 </li>
+                    <li>Month 3 → ₹5,000 </li>
+                    <li>Month 4 → ₹4,999</li>
+                   </ul>
+                  </td>
+                 </tr>
+                 <tr class="border-bottom">
+                  <td class="text-muted py-3" style="vertical-align: top;">Delivery</td>
+                  <td class="py-3">
+                   <div class="text-danger">Sri Lanka</div>
+                   <div class="text-muted small mt-1">Standard</div>
+                   <div class="fw-bold mt-1">Rs. 255</div>
+                  </td>
+                 </tr>
+                 <tr>
+                  <td class="text-muted py-3" style="vertical-align: top;">Service</td>
+                  <td class="py-3">
+                   <ul class="list-unstyled m-0">
+                    <li class="text-dark">▪ 14 days easy return</li>
+                    <li class="text-muted small">Change of mind is not applicable</li>
+                    <li class="text-dark mt-1">▪ 6 Months Seller Warranty</li>
+                   </ul>
+                  </td>
+                 </tr>
+                </tbody>
+               </table>
+              </div>
+            </div>
+           </div>
+          </div>
+         </div>
+      </div>
+     </div>
+    <!--card-3-->
+     <div class="col-md-4">
+      <div class="card">
+       <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" class="card-img-top object-fit-cover flip-img" style="height: 350px;">
+        <div class="card-body">
+         <h5 class="card-title">Pro Lens Camera</h5>
+         <p class="card-text text-muted">Capture every moment in HD quality,Sharp photos with easy controls</p>
+         <div class="d-flex justify-content-between align-items-center mt-3">
+          <span class="fw-bold text-success">₹24,999</span>
+          <div class="d-flex gap-2">
+           <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"data-bs-target="#product3">Quick View</button>
+           <button type="button" class="btn btn-primary">Buy</button>
+          </div>
+         </div>
+        </div>
+        <div class="card-footer">
+         <small class="text-body-secondary">Updated 5 mins ago</small>
+        </div>    
+    <!-- QUICK VIEW POPUP -->
+         <div class="modal fade" id="product3">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+           <div class="modal-content">
+            <div class="modal-header">
+             <h5>Product Details</h5>
+             <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+             <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" class="card-img-top" style="height:550px; width:100%; object-fit:cover;">
+             <div class="model-bodypart">
+              <h5 class="title">Pro Lens Camera</h5>
+              <p class="model-text text-muted">Capture every moment in HD quality,Sharp photos with easy controls</p>
+             </div>
+             <div class="container mt-5 bg-white p-4 rounded shadow-sm"style="max-width: 600px;">
+              <table class="table table-borderless align-middle m-0">
+               <tbody>
+                <tr class="border-bottom">
+                 <td class="text-muted py-3" style="width: 30%;">Specifications</td>
+                 <td class="py-3 fw-normal text-dark">Brand, Lens Type,optical zoom,battery life</td>
+                </tr>
+                <tr class="border-bottom">
+                 <td class="text-muted py-3">Installment</td>
+                 <td class="py-1 text-dark">
+                  <ul>
+                   <li>Month 1 → ₹5,000 </li>
+                   <li>Month 2 → ₹5,000 </li>
+                   <li>Month 3 → ₹5,000 </li>
+                   <li>Month 4 → ₹5,000</li>
+                   <li>Month 4 → ₹4,999</li>
+                  </ul>
+                 </td>
+                </tr>
+                <tr class="border-bottom">
+                 <td class="text-muted py-3" style="vertical-align: top;">Delivery</td>
+                 <td class="py-3">
+                  <div class="text-danger">Sri Lanka</div>
+                  <div class="text-muted small mt-1">Standard</div>
+                  <div class="fw-bold mt-1">Rs. 255</div>
+                 </td>
+                </tr>
+                <tr>
+                 <td class="text-muted py-3" style="vertical-align: top;">Service</td>
+                 <td class="py-3">
+                  <ul class="list-unstyled m-0">
+                   <li class="text-dark">▪ 14 days easy return</li>
+                   <li class="text-muted small">Change of mind is not applicable</li>
+                   <li class="text-dark mt-1">▪ 6 Months Seller Warranty</li>
+                  </ul>
+                 </td>
+                </tr>
+               </tbody>
+              </table>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>         
+      </div>
+     </div>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- REF-03 -->
+<div class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 11">
+    <div class="toast show align-items-center text-dark bg-danger border-0 shadow rounded" style="min-width:250px;" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <!-- 2. Toast ulla irukra content text -->
+            <div class="toast-body medium">
+                This is an danger toast!
+            </div>
+            <!-- 3. Close button (Toast style ku yetra madhiri) -->
+            <button type="button" class="btn-close btn-close-dark me-2     m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            
+        </div>
+    </div>
+</div>
+<div class="position-fixed bottom-0 start-0 p-4" style="z-index: 11">
+    <div class="toast show align-items-center text-dark bg-warning border-0 shadow rounded"  style="min-width:250px;"  role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body medium ">
+                This is a warning toast!
+            </div>
+            <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+<div class="position-fixed bottom-0 end-0 p-4" style="z-index: 11">
+    <div class="toast show align-items-center text-dark bg-success border-0 shadow rounded"  style="min-width:250px;" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body medium">
+                This is a success toast!
+            </div>
+            <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- REF-04 -->
+<div class="row justify-content-center mt-4">
+  <div class="col-sm-6 ">
+    <div class="card w-100">
+      <div class="card-body">
+        <h5 class="card-title">Special title</h5>
+        <p class="card-text">Main model that opens a confirmation model</p>
+        
+        <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+           <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+               <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               <p class="model-text">Perform an action that needs confirmation</p>
+               <button class="btn btn-danger" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Delete item</button>
+              </div>
+              <div class="modal-footer">
+               <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Close</button>
+              </div>
+            </div>
+           </div>
+        </div>
+        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first modal</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REF-05 -->
+<div class="container mt-5 mb-5">
+<div class="accordion w-100 mx-auto" id="accordionBasic" >
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Item-1
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBasic">
+      <div class="accordion-body">
+        <strong><b>WATCH</b></strong> Watch is a useful device that helps us know the time. It is worn on the wrist and is available in many styles and designs. Modern watches can also show the date, track fitness activities, and connect to smartphones ⌚.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Item-2
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionBasic">
+      <div class="accordion-body">
+        <strong><b>PHONE</b></strong>A phone is an important device used for communication. It allows people to make calls, send messages, and access the internet. Modern smartphones can also be used for taking photos, studying, and entertainment 📱.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Item-3
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionBasic">
+      <div class="accordion-body">
+        <strong><b>LAPTOP</b></strong>A laptop is a portable computer that can be used anywhere. It helps people study, work, browse the internet, and create documents. Laptops are powerful, convenient, and widely used in daily life 💻.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
