@@ -405,36 +405,5 @@
 
 
     <script src="./bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-  const filterButtons = document.querySelectorAll(".filter-btn");
-  const productItems = document.querySelectorAll(".product-item");
-
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      // 1. Manage Active Button Styling Class
-      filterButtons.forEach((btn) => {
-        btn.classList.remove("btn-primary", "active");
-        btn.classList.add("btn-outline-primary");
-      });
-      button.classList.add("btn-primary", "active");
-      button.classList.remove("btn-outline-primary");
-
-      // 2. Filter Action Strategy
-      const targetFilter = button.getAttribute("data-filter");
-
-      productItems.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category");
-
-        if (targetFilter === "all" || itemCategory === targetFilter) {
-          item.classList.remove("is-hidden");
-        } else {
-          item.classList.add("is-hidden");
-        }
-      });
-    });
-  });
-});
-    </script>
 </body>
 </html>
